@@ -7,7 +7,14 @@ class TweetsController < ApplicationController
   end
 
   def create
-   Tweet.create(content: params[:tweet][:content])
+   Tweet.create(tweet_params)
    redirect_to new_tweet_path
+  end
+
+
+  private
+
+  def tweet_params
+    params.require(:tweet).permit(:cotent)
   end
 end
