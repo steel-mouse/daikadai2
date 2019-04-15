@@ -1,2 +1,9 @@
-<h1>Tweets#index</h1>
-<p>Find me in app/views/tweets/index.html.erb</p>
+<h1>卍　呟き一覧　卍</h1>
+
+<table>
+  <% @tweets.each do |tweet| %>
+   <tr>
+     <td><%=  tweet.content %></td>
+   </tr>
+  <% end %>
+</table>
