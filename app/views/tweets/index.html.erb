@@ -1,10 +1,11 @@
 <h1>卍　呟き一覧　卍</h1>
 <p><%= notice %></p>
 <table>
+<!-- <table border = "1"> -->
   <% @tweets.each do |tweet| %>
    <tr>
      <td><%=  tweet.content %></td>
-     <td><%= link_to '詳細を確認する', tweet_path(tweet.id) %></td>
+     <!-- <td><%= link_to '詳細を確認する', tweet_path(tweet.id) %></td> -->
      <td><%= link_to "呟きを編集する", edit_tweet_path(tweet.id) %><td>
      <td><%= link_to '呟きを削除する', tweet_path(tweet.id), method: :delete, data: { confirm: '本当に削除していいですか？' } %></td>
    </tr>
