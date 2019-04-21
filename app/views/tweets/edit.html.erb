@@ -1,8 +1,8 @@
 <h1>呟き改編画面</h1>
 
-<p><%= notice %></p>
+<%= render 'form' %>
 
-<%= form_with(model: @tweet, local:true) do |form| %>
+<!-- <%= form_with(model: @tweet, local:true) do |form| %>
 
 <% if @tweet.errors.any? %>
     <div id="error_explanation">
@@ -24,4 +24,4 @@
   <%= form.submit %>
 <% end %>
 
-<%= link_to 'ブログ一覧画面にもどる', tweets_path %>
+<%= link_to 'ブログ一覧画面にもどる', tweets_path %> -->

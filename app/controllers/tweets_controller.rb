@@ -6,7 +6,11 @@ class TweetsController < ApplicationController
   end
 
   def new
-    @tweet = Tweet.new
+    if params[:back]
+     @tweet = Tweet.new(tweet_params)
+   else
+     @tweet = Tweet.new
+   end
   end
 
   def create
@@ -14,7 +18,7 @@ class TweetsController < ApplicationController
     if @tweet.save
      redirect_to tweets_path, notice: "呟きました"
     else
-      render'new'
+      render 'new'
     end
 
   end
@@ -36,14 +40,21 @@ class TweetsController < ApplicationController
      render 'edit'
    end
   end
+
+  def confirm
+    @tweet = Tweet.new(tweet_params)
+    render :new if @tweet.invalid?
+  end
+
   def destroy
     @tweet.destroy
     redirect_to tweets_path, notice:"呟きを削除しました！"
   end
-  private
+
+private
 
   def tweet_params
-    params.require(:tweet).permit(:cotent)
+    params.require(:tweet).permit(:content)
   end
 
   def set_tweet
