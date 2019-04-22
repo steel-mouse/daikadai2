@@ -1,0 +1,63 @@
+// tr{background-color: #FF0000}
+html{
+  font-size: 100%;
+}
+
+header{
+  background-color: skyblue;
+  position: static;
+  top: 0px;
+  left: 0px;
+}
+
+body{
+
+}
+
+footer{
+
+}
+
+div.sample {
+  height:100px;
+  background-color: skyblue;
+  font-weight:bold;
+  position: relative;
+}
+
+div.dummy {
+  height: 100px;
+  background-color: turquoise;
+}
+
+div.sample1 {
+  background-color: black;
+  color: red;
+  position: static;
+  top: 10px;
+  left: 10px;
+}
+
+div.sample2 {
+  background-color: black;
+  color: red;
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+
+div.sample3 {
+  background-color: black;
+  color: red;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+div.sample4 {
+  background-color: black;
+  color: red;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
