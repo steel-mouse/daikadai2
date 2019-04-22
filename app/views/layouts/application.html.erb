@@ -9,6 +9,11 @@
   </head>
 
   <body>
+    <header>
+      <%= link_to 'top', tweets_path %>
+      <%= link_to '新規投稿画面へ', new_tweet_path %>
+      <%= link_to 'ブログ一覧画面にもどる', list_tweets_path %>
+    </header>
     <%= yield %>
   </body>
 </html>

@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-
+  root to: 'tweets#index'
   resources :tweets do
       collection do
+        get :list
         post :confirm
       end
     end
