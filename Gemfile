@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'rails-i18n'
 # 入れた bundle install
 gem 'rb-readline'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
