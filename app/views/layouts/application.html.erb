@@ -3,17 +3,26 @@
   <head>
     <title>Daikadai2</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <header>
-      <%= link_to 'top', tweets_path %>
-      <%= link_to '新規投稿画面へ', new_tweet_path %>
-      <%= link_to 'ブログ一覧画面にもどる', list_tweets_path %>
-    </header>
-    <%= yield %>
+  <body >
+    <div class='container'>
+      <header>
+        <ul class = "top_menu clearfix">
+          <li><%= link_to 'top', tweets_path %></li>
+          <li><%= link_to '新規投稿画面へ', new_tweet_path %></li>
+          <li><%= link_to 'ブログ一覧画面にもどる', list_tweets_path %></li>
+        </ul>
+      </header>
+
+    <div  class = main_content>
+      <%= yield %>
+    </div>
+    <footer>
+        <p>大課題２　ツイッタークローン</p>
+    </footer>
+  </div>
   </body>
 </html>
